@@ -1,0 +1,61 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+.pagination {
+    justify-content: flex-end !important;
+}
+
+.circle {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.circle.green {
+    background-color: green;
+}
+
+.circle.red {
+    background-color: red;
+}
+
+.circle.gray {
+    background-color: #ccc;
+}
+
+.all-student-count p {
+    font-size: 14px;
+    font-weight: 700;
+    border: 1px solid #212529;
+    padding: 5px 10px;
+    text-align: center;
+    border-radius: 10px;
+    color: #212529;
+    margin: 0 0 8px 0;
+}
+
+tr.green-main td,
+tr.green-main th {
+    background: green;
+    color: white;
+}
+
+tr.red-main td,
+tr.red-main th {
+    background: red;
+    color: white;
+}
+
+tr.attendance-red {
+    background: red;
+}
