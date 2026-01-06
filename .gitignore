@@ -70,3 +70,7 @@ Thumbs.db
 # Laravel storage
 /storage/*.key
 
+id_ed25519_shailender
+id_ed25519_shailender.pub
+
+
