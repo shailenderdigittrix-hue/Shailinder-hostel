@@ -10,7 +10,6 @@ Route::get('/buildings/{building}/floors', [APIController::class, 'getFloors']);
 Route::get('/buildings/{building}/rooms', [APIController::class, 'getRooms']);
 
 Route::post("/biometric/attendance", [AttendanceController::class, 'api_biometric_attendance']);
-Route::get("/biometric/attendance", [AttendanceController::class, 'api_biometric_attendance']);
 
 
 

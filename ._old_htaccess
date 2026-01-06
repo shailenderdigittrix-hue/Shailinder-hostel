@@ -1,0 +1,37 @@
+<Question ID="1" Shortcut="chapter 1" Order="" ElementType="chapter" >
+<LongCaption><IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Redirect everything to index.php in the root
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^ /public/index.php [L]
+    
+    # RewriteEngine On
+    # RewriteRule ^(.*)$ public/$1 [L]
+# </IfModule>
+ # BLOCK ACCESS TO .ENV FILE
+    RewriteRule \.env$ - [F,L,NC]
+</IfModule>
+
+# BLOCK ACCESS TO SENSITIVE FILES
+<FilesMatch "^\.">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+<Files ".env">
+    Order allow,deny
+    Deny from all
+</Files>
+
+<Files ".env.*">
+    Order allow,deny
+    Deny from all
+</Files>
+
+<FilesMatch "\.(env|json|config|log|lock|md|yml|yaml)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch></LongCaption>
+</Question>
